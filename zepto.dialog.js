@@ -122,9 +122,11 @@
 				// 指定遮罩层是否关闭
 				// FastClick.attach(document.body);
 				if(config.maskClose){
-					mask.touchend(function(){
+					mask.click(function(e){
+						// setTimeout(function(){
+							_this_.close();
+						// },320)
 						// e.preventDefault();
-						_this_.close();
 					})
 				}
 			}
